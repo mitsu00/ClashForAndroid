@@ -54,7 +54,7 @@ jobs:
         with:
           arguments: --no-daemon app:assembleFossRelease
       - name: Checking Directory
-        run: ls ${{ GITHUB_WORKSPACE }}/app/build/outputs/apk/foss/release/
+        run: ls $(GITHUB_WORKSPACE)/app/build/outputs/apk/foss/release/
       - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
