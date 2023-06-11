@@ -59,4 +59,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: app-release
-          path: ${{ GITHUB_WORKSPACE }}/app/build/outputs/apk/foss/release/*.apk
+          path: $(GITHUB_WORKSPACE)/app/build/outputs/apk/foss/release/*.apk
