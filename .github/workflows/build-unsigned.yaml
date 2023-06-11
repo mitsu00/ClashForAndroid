@@ -53,3 +53,9 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: --no-daemon app:assembleFossRelease
+      - name: Upload DTBO image
+        if: env.CHECK_DTBO_IS_OK == 'true'
+        uses: actions/upload-artifact@v3
+        with:
+          name: app-release
+          path: app/build/outputs/apk/foss/release/*-arm64-v8a-release.apk
